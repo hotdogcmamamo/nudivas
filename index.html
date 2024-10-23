@@ -1,110 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn more about NU's volleyball divas: Bella Belen, Jaja Santiago, and Alyssa Solomon. Their achievements and contributions to Philippine volleyball.">
-  <meta name="keywords" content="Bella Belen, Jaja Santiago, Alyssa Solomon, NU Volleyball, Philippine Volleyball, UAAP Volleyball, NU Lady Bulldogs">
-  <meta name="author" content="Your Name">
-  <title>NU's Volleyball Divas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      text-align: center;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      color: #4A90E2; /* Soft Blue */
-      margin-bottom: 40px;
-      font-size: 3em; /* Increased font size for better emphasis */
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    }
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 40px; /* Space between player sections */
-    }
-    .player {
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      background-color: white;
-      border: 1px solid #4A90E2; /* Matching border color */
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      width: 80%; /* Width of the player card */
-      max-width: 600px; /* Max width for larger screens */
-      transition: transform 0.3s; /* Smooth transition on hover */
-    }
-    .player:hover {
-      transform: scale(1.02); /* Slightly scale up on hover */
-    }
-    .player img {
-      width: 150px; /* Reduced image size for better layout */
-      height: auto;
-      margin-right: 20px;
-      border-radius: 10px;
-      border: 2px solid #4A90E2; /* Matching border color */
-    }
-    .player h2 {
-      color: #333;
-      font-size: 2em; /* Increased font size for player names */
-      margin-bottom: 10px; /* Space below the player name */
-    }
-    .player ul {
-      list-style: none;
-      padding-left: 0;
-      text-align: left; /* Align text to the left */
-    }
-    .player ul li {
-      font-size: 1.1em;
-      color: #555;
-      margin-bottom: 5px; /* Space between list items */
-      line-height: 1.5; /* Improved readability */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about NU's volleyball divas: Bella Belen, Jaja Santiago, and Alyssa Solomon. Their achievements and contributions to Philippine volleyball.">
+    <meta name="keywords" content="Bella Belen, Jaja Santiago, Alyssa Solomon, NU Volleyball, Philippine Volleyball, UAAP Volleyball, NU Lady Bulldogs">
+    <meta name="author" content="Your Name">
+    <title>NU's Volleyball Divas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #007bff;
+            margin-bottom: 40px;
+            font-size: 3em;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+        .player {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            background-color: white;
+            border: 1px solid #007bff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            transition: transform 0.3s;
+            cursor: pointer; /* Change cursor to pointer */
+        }
+        .player:hover {
+            transform: scale(1.02);
+        }
+        .player img {
+            width: 150px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 10px;
+            border: 2px solid #007bff;
+        }
+        .player h2 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .player ul {
+            list-style: none;
+            padding-left: 0;
+            text-align: left;
+        }
+        .player ul li {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 5px;
+            line-height: 1.5;
+        }
+        /* Slideshow styles */
+        .slideshow {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .slideshow img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 2em;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-  <h1>NU's Volleyball Divas</h1>
-  <div class="container">
-    <div class="player">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiKJfgZJK9-HablwfbRZFNEu2M3FFRWE8gnA&s" alt="Bella Belen">
-      <div>
-        <h2>Bella Belen</h2>
-        <ul>
-          <li>First ever Rookie of the Year (ROY) - Most Valuable Player (MVP) in UAAP Women's Division</li>
-          <li>2x UAAP MVP</li>
-        </ul>
-      </div>
+
+<h1>NU's Volleyball Divas</h1>
+<div class="container">
+    <div class="player" onclick="openSlideshow('bella')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiKJfgZJK9-HablwfbRZFNEu2M3FFRWE8gnA&s" alt="Bella Belen">
+        <div>
+            <h2>Bella Belen</h2>
+            <ul>
+                <li>First ever Rookie of the Year (ROY) - Most Valuable Player (MVP) in UAAP Women's Division</li>
+                <li>2x UAAP MVP</li>
+                <li>Key player for NU Lady Bulldogs' championship runs</li>
+                <li>Known for her strong spikes and consistent plays on the court</li>
+            </ul>
+        </div>
     </div>
 
-    <div class="player">
-      <img src="https://fastbreak.com.ph/wp-content/uploads/2024/06/jaja.jpg" alt="Jaja Santiago">
-      <div>
-        <h2>Jaja Santiago</h2>
-        <ul>
-          <li>First ever Filipina to win 2 JVL Medals</li>
-          <li>1x UAAP MVP</li>
-          <li>International player with a stint in Japan's V.League</li>
-        </ul>
-      </div>
+    <div class="player" onclick="openSlideshow('jaja')">
+        <img src="https://fastbreak.com.ph/wp-content/uploads/2024/06/jaja.jpg" alt="Jaja Santiago">
+        <div>
+            <h2>Jaja Santiago</h2>
+            <ul>
+                <li>First ever Filipina to win 2 JVL Medals</li>
+                <li>1x UAAP MVP</li>
+                <li>International player with a stint in Japan's V.League</li>
+                <li>Stands at 6'5", making her a formidable blocker and attacker</li>
+            </ul>
+        </div>
     </div>
 
-    <div class="player">
-      <img src="https://1cms-img.imgix.net/Alyssa%20Solomon%20Finals%20MVP%20S86.jpg?q=auto=compress" alt="Alyssa Solomon">
-      <div>
-        <h2>Alyssa Solomon</h2>
-        <ul>
-          <li>3x UAAP Best Spiker</li>
-          <li>2x SEA V. League Best Opposite Spiker</li>
-        </ul>
-      </div>
+    <div class="player" onclick="openSlideshow('alyssa')">
+        <img src="https://1cms-img.imgix.net/Alyssa%20Solomon%20Finals%20MVP%20S86.jpg?q=auto=compress" alt="Alyssa Solomon">
+        <div>
+            <h2>Alyssa Solomon</h2>
+            <ul>
+                <li>3x UAAP Best Spiker</li>
+                <li>2x SEA V. League Best Opposite Spiker</li>
+                <li>Key player for NU Lady Bulldogs' recent success</li>
+                <li>Renowned for her exceptional power and precision in spiking</li>
+            </ul>
+        </div>
     </div>
-  </div>
+</div>
+
+<!-- Slideshow Modal -->
+<div id="slideshow" class="slideshow" onclick="closeSlideshow()">
+    <span class="close" onclick="closeSlideshow()">&times;</span>
+    <img id="slideshow-image" src="" alt="">
+</div>
+
+<script>
+    function openSlideshow(player) {
+        const slideshow = document.getElementById("slideshow");
+        const slideshowImage = document.getElementById("slideshow-image");
+
+        // Set the image based on the player clicked
+        switch (player) {
+            case 'bella':
+                slideshowImage.src = 'https://example.com/bella-awards.jpg'; // Add Bella's awards image URL here
+                break;
+            case 'jaja':
+                slideshowImage.src = 'https://example.com/jaja-awards.jpg'; // Add Jaja's awards image URL here
+                break;
+            case 'alyssa':
+                slideshowImage.src = 'https://example.com/alyssa-awards.jpg'; // Add Alyssa's awards image URL here
+                break;
+            default:
+                break;
+        }
+        slideshow.style.display = 'flex'; // Show the slideshow
+    }
+
+    function closeSlideshow() {
+        const slideshow = document.getElementById("slideshow");
+        slideshow.style.display = 'none'; // Hide the slideshow
+    }
+</script>
+
 </body>
 </html>
